@@ -1,140 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
 
-    <title>Udacity A11y</title>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
 
-    <!-- Mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">The Funion</h1>
+      <!-- Maybe this could be improved with aria-activedescendant later? -->
+      <nav class="menu">
+        <a href="#">Politics</a>
+        <a href="#">Business</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Sports</a>
+        <a href="#" class="btn-search pull-right"><img src="./images/search.svg" alt="Search" />Search</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h2 class="offscreen">Top story</h2>
+    <article class="main-story">
+      <img class="pull-right" src="./images/cat.jpg" alt="A cat staring menacingly off into space">
+      <div class="info">
+        <h3 class="headline">Study shows 9 out of 10 cats quietly judging their owners as they sleep</h3>
+        <p>
+          GRAND RAPIDS, MI—Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">Read More</a>
+        </p>
+      </div>
+    </article>
 
-  </head>
-  <body>
-    <h1>Udacity A11y Course TOC</h1>
-    <ul>
-      <li>
-        <span>Lesson 01: Overview</span>
-        <ul>
-          <li>Experiencing a screen reader: <a href="lesson1-overview/06-experiencing-screen-reader/">Exercise</a>
-        </ul>
-      </li>
-      <li>
-        <span>Lesson 02: Focus</span>
-        <ul>
-          <li>
-            Experiencing Focus: <a href="lesson2-focus/01-basic-form">Solution</a>
-          </li>
-          <li>
-            Focusable elements in wrong DOM order:
-            <a href="lesson2-focus/02-dom-order">Problem</a> |
-            <a href="lesson2-focus/02-dom-order/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Offscreen content:
-            <a href="lesson2-focus/04-offscreen-content">Problem</a> |
-            <a href="lesson2-focus/04-offscreen-content/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Radio Group:
-            <a href="lesson2-focus/05-radio-group">Problem</a> |
-            <a href="lesson2-focus/05-radio-group/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Modals and keyboard traps:
-            <a href="lesson2-focus/07-modals-and-keyboard-traps">Problem</a> |
-            <a href="lesson2-focus/07-modals-and-keyboard-traps/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Manage focus yourself:
-            <a href="lesson2-focus/03-managing-focus">Problem</a> |
-            <a href="lesson2-focus/03-managing-focus/solution">Solution</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <span>Lesson 03: Semantics, Built-in</span>
-        <ul>
-          <li>
-            <a href="lesson3-semantics-built-in/02-chromevox-lite">Exercise 02: Introducing ChromeVox lite</a>
-          </li>
-          <li>
-            <a href="lesson3-semantics-built-in/03-experience-screen-reader">Exercise 03: ChromeVox lite with unfamiliar form</a>
-          </li>
-          <li>
-            <a href="lesson3-semantics-built-in/05-writing-semantic-html">Exercise 05: Writing semantic HTML</a>
-          </li>
-          <li>Node 17: <a href="lesson3-semantics-built-in/17-text-alternatives/funion.html">Text alternatives</a>
-          <li>
-            Exercise 06: Labelling input elements:
-            <a href="lesson3-semantics-built-in/16-labelling-input-elements/index.html">(ChromeVox Lite version)</a> |
-            <a href="lesson3-semantics-built-in/16-labelling-input-elements/flight-booking.html">(Vanilla version)</a> |
-            Solution 1:
-            <a href="lesson3-semantics-built-in/16-labelling-input-elements/solution/index.html"> (ChromeVox Lite version)</a> |
-            <a href="lesson3-semantics-built-in/16-labelling-input-elements/solution/flight-booking.html"> (Vanilla version)</a> |
-            Solution 2:
-            <a href="lesson3-semantics-built-in/16-labelling-input-elements/solution2/index.html"> (ChromeVox Lite version)</a> |
-            <a href="lesson3-semantics-built-in/16-labelling-input-elements/solution2/flight-booking.html"> (Vanilla version)</a> |
-          </li>
-        </ul>
-      </li>
-      <li>
-        <span>Lesson 04: Semantics: navigating content</span>
-        <ul>
-          <li><a href="lesson4-semantics-navigating/03-navigating-by-headings/index.html">Exercise 01: Navigating by headings</a>
-          <li><a href="lesson4-semantics-navigating/08-link-text/index.html">Exercise 03: Link text</a> | <a href="lesson4-semantics-navigating/08-link-text/solution/index.html">Solution</a>
-          <li><a href="lesson4-semantics-navigating/10-landmarks/index.html">Exercise 04: Landmarks</a>
-        </ul>
-      </li>
-      <li>
-        <span>Lesson 05: Semantics: ARIA</span>
-        <ul>
-          <li><a href="lesson5-semantics-aria/02-why-aria/index.html">Video 02: Checkboxes</a>
-          <li>
-            Exercise: Checkboxes
-            <a href="lesson5-semantics-aria/03-first-steps/index.html">Problem</a> |
-            <a href="lesson5-semantics-aria/03-first-steps/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Exercise: Radio group
-            <a href="lesson5-semantics-aria/06-radio-group/index.html">Problem</a> |
-            <a href="lesson5-semantics-aria/06-radio-group/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Exercise: Combobox
-            <a href="lesson5-semantics-aria/13-combobox/index.html">Problem</a> |
-            <a href="lesson5-semantics-aria/13-combobox/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Exercise: Dialog
-            <a href="lesson5-semantics-aria/21-dialog/index.html">Problem</a> |
-            <a href="lesson5-semantics-aria/21-dialog/solution/index.html">Solution</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <span>Lesson 06: Styling</span>
-        <ul>
-          <li>
-            Focus styles:
-            <a href="lesson6-styling/01-focus-styles/index.html">Problem</a> |
-            <a href="lesson6-styling/01-focus-styles/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Style ARIA states:
-            <a href="lesson6-styling/02-style-aria-states/index.html">Problem</a> |
-            <a href="lesson6-styling/02-style-aria-states/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Contrast Audit:
-            <a href="lesson6-styling/03-contrast-audit/index.html">Problem</a> |
-            <a href="lesson6-styling/03-contrast-audit/solution/index.html">Solution</a>
-          </li>
-          <li>
-            Mobile Screenreader:
-            <a href="lesson6-styling/04-mobile-screenreader/index.html">Example</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </body>
+    <div class="side-by-side">
+      <div class="column">
+        <div class="tier-header">
+          <h2>In the news</h2>
+        </div>
+        <article>
+          <h3 class="headline">Bee wonders if maybe everyone else is a drone and he's the only one who has it "figured out." <a href="#">Read More</a></h3>
+          <img src="./images/bee.jpg" alt="A bee on top of a flower" />
+        </article>
+      </div>
+      <div class="column">
+        <article>
+          <img src="./images/telephone.jpg" alt="A red, London telephone booth" />
+          <div class="info">
+            <h3 class="headline">Telephone booths. How is this still a thing?</h3>
+            <p>
+              LONDON—Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">Read More</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="three-col">
+      <div class="tier-header">
+        <h2>Recommended</h2>
+      </div>
+      <div class="columns">
+        <article>
+          <img src="./images/dog.jpg" alt="A dog at a desk looks up at a laptop and mouse" />
+          <div class="info">
+            <h3 class="headline">Turn man's best friend into man's best personal assistant. <a href="#">Read More</a></h3>
+          </div>
+        </article>
+        <article>
+          <img src="./images/coffee.jpg" alt="A cup of coffee on a table" />
+          <div class="info">
+            <h3 class="headline">San Franciscans are losing their minds over this third wave, artisanal, fair trade, handcrafted, locavore coffee. <a href="#">Read More</a></h3>
+          </div>
+        </article>
+        <article>
+          <img src="./images/football.jpg" alt="A football player hands the ball off to another player" />
+          <div class="info">
+            <h3 class="headline">Sportsball team scores a touchpoint to win the big race. <a href="#">Read More</a></h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <div class="newsletter">
+    <div class="container">
+      <h3>Like the Funion? Consider joining our newsletter!</h3>
+      <input type="text">
+      <button>Sign Up</button>
+    </div>
+  </div>
+</body>
+
 </html>
